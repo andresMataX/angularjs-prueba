@@ -1,0 +1,33 @@
+<div class="container-sm border border-5 border-dark p-5 mt-5">
+    <h1 class="h1 text-center mb-5 fw-bold">Registrar cliente</h1>
+    <form class="m-5">
+        <div class="col">
+            <div class="fila m-3">
+                <h2 class="text-center">Nombre del cliente</h2>
+                <input class="form-control" type="text" name="name_cli" id="nombre">
+            </div>
+            <div class="fila m-3">
+                <h2 class="text-center">Apellido del cliente</h2>
+                <input class="form-control" type="text" name="l_name_cli" id="apellido">
+            </div>
+        </div>
+        <div class="col">
+            <div class="fila m-3">
+                <h2 class="text-center">Tipo de corte</h2>
+                <input class="form-control" list="cortes" name="id_cut_type" id="corte" />
+                <datalist id="cortes">
+                </datalist>
+            </div>
+            <div class="fila m-3">
+                <div class="cont-img">
+                    <img class="d-none d-lg-block" src="./img/007-tijeras.png" alt="tijeras">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="d-flex justify-content-between">
+            <button class="btn btn-light btn-lg">CANCELAR</button>
+            <button class="btn btn-outline-dark btn-lg">ACEPTAR</button>
+        </div>
+    </form>
+</div>
