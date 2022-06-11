@@ -11,12 +11,17 @@ body {
 
 .sidebar img {
     cursor: pointer;
-    width: 75%;
-    height: 75%;
+    width: 65%;
+    height: 65%;
 }
 
 .sidebar {
     border-bottom: 5px solid black;
+}
+
+/* Menú Coste */
+.menu__costes__img {
+    width: 50%;
 }
 
 /* Formularios */
@@ -38,4 +43,9 @@ body {
 
 .btn {
     width: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

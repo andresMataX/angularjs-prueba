@@ -6,5 +6,7 @@ angular.module('phonecatApp', [
     'hola',
     'adios',
     'sidebar',
-    'registroCliente'
+    'registroCliente',
+    'registroCoste',
+    'menuCoste',
 ]);
