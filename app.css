@@ -8,11 +8,34 @@ body {
 }
 
 /* Sidebar */
-/* min-height: 100vh;
-width: 100px; */
 
 .sidebar img {
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 75%;
+    height: 75%;
+}
+
+.sidebar {
+    border-bottom: 5px solid black;
+}
+
+/* Formularios */
+.contenedor {
+    border: 8px solid black;
+}
+
+.h1__title {
+    font-size: 60px;
+}
+
+.h2__subtitle {
+    font-size: 40px;
+}
+
+.form__img {
+    width: 45%;
+}
+
+.btn {
+    width: 200px;
 }

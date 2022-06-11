@@ -1,33 +1,33 @@
-<div class="container-sm border border-5 border-dark p-5 mt-5">
-    <h1 class="h1 text-center mb-5 fw-bold">Registrar cliente</h1>
+<div class="contenedor container-sm h-100 p-5 mt-5">
+    <h1 class="h1__title text-center mb-5 fw-bold">Registrar cliente</h1>
     <form class="m-5">
         <div class="col">
-            <div class="fila m-3">
-                <h2 class="text-center">Nombre del cliente</h2>
-                <input class="form-control" type="text" name="name_cli" id="nombre">
+            <div class="fila m-3 mt-5 input-group-lg">
+                <h2 class="h2__subtitle text-center">Nombre del cliente</h2>
+                <input class="form-control fs-2" type="text" name="name_cli" id="nombre">
             </div>
-            <div class="fila m-3">
-                <h2 class="text-center">Apellido del cliente</h2>
-                <input class="form-control" type="text" name="l_name_cli" id="apellido">
+            <div class="fila m-3 mt-5 input-group-lg">
+                <h2 class="h2__subtitle text-center">Apellido del cliente</h2>
+                <input class="form-control fs-2" type="text" name="l_name_cli" id="apellido">
             </div>
         </div>
         <div class="col">
-            <div class="fila m-3">
-                <h2 class="text-center">Tipo de corte</h2>
-                <input class="form-control" list="cortes" name="id_cut_type" id="corte" />
+            <div class="fila m-3 mt-5 input-group-lg">
+                <h2 class="h2__subtitle text-center">Tipo de corte</h2>
+                <input class="form-control fs-2" list="cortes" name="id_cut_type" id="corte" />
                 <datalist id="cortes">
                 </datalist>
             </div>
-            <div class="fila m-3">
+            <div class="fila m-3 mt-5 input-group-lg">
                 <div class="cont-img">
-                    <img class="d-none d-lg-block" src="./img/007-tijeras.png" alt="tijeras">
+                    <img class="form__img d-block m-auto mt-5 mb-5" src="./img/007-tijeras.png" alt="tijeras">
                 </div>
             </div>
         </div>
         <br>
-        <div class="d-flex justify-content-between">
-            <button class="btn btn-light btn-lg">CANCELAR</button>
-            <button class="btn btn-outline-dark btn-lg">ACEPTAR</button>
+        <div class="d-flex justify-content-between btn-group-lg">
+            <button class="btn btn-outline-dark fs-2">CANCELAR</button>
+            <button class="btn btn-outline-dark fs-2">ACEPTAR</button>
         </div>
     </form>
 </div>
