@@ -1,33 +1,28 @@
-<div class="container mx-auto my-20 h-screen border-8 border-slate-900">
-    <h1 class="text-6xl font-bold text-center">Registrar cliente</h1>
-    <form class="">
-        <div class="">
-            <div class="">
-                <h2 class="">Nombre del cliente</h2>
-                <input class="" type="text" name="name_cli" id="nombre">
-            </div>
-            <div class="fila m-3 mt-5 input-group-lg">
-                <h2 class="">Apellido del cliente</h2>
-                <input class="" type="text" name="l_name_cli" id="apellido">
-            </div>
+<div class="container mx-auto my-20 h-screen border-8 border-slate-900 p-12">
+    <h1 class="text-6xl font-bold text-center 12">Registrar cliente</h1>
+    <form class="flex flex-col justify-evenly h-full">
+        <div class="flex flex-col justify-center">
+            <h2 class="text-5xl text-center 4">Nombre del cliente</h2>
+            <input class="mx-auto border-4 border-slate-900 rounded-2xl p-1.5 text-4xl py-2.5 px-3" type="text"
+                name="name_cli" id="nombre">
         </div>
-        <div class="">
-            <div class="">
-                <h2 class="">Tipo de corte</h2>
-                <input class="" list="cortes" name="id_cut_type" id="corte" />
-                <datalist id="cortes">
-                </datalist>
-            </div>
-            <div class="">
-                <div class="">
-                    <img class="" src="./img/007-tijeras.png" alt="tijeras">
-                </div>
-            </div>
+        <div class="flex flex-col justify-center">
+            <h2 class="text-5xl text-center 4">Apellido del cliente</h2>
+            <input class="mx-auto border-4 border-slate-900 rounded-2xl p-1.5 text-4xl py-2.5 px-3" type="text"
+                name="l_name_cli" id="apellido">
         </div>
+        <div class="flex flex-col justify-center">
+            <h2 class="text-5xl text-center 4">Tipo de corte</h2>
+            <input class="mx-auto border-4 border-slate-900 rounded-2xl p-1.5 text-4xl py-2.5 px-3" list="cortes"
+                name="id_cut_type" id="corte" />
+            <datalist id="cortes">
+            </datalist>
+        </div>
+        <img class="w-64 14 mx-auto" src="./img/007-tijeras.png" alt="tijeras">
         <br>
-        <div class="">
-            <button class="">CANCELAR</button>
-            <button class="">ACEPTAR</button>
+        <div class="flex justify-between">
+            <button class="border-4 border-slate-900 rounded-2xl p-1.5 text-5xl py-2.5 px-3">CANCELAR</button>
+            <button class="border-4 border-slate-900 rounded-2xl p-1.5 text-5xl py-2.5 px-3">ACEPTAR</button>
         </div>
     </form>
 </div>
