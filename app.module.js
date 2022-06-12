@@ -9,4 +9,5 @@ angular.module('phonecatApp', [
     'registroCliente',
     'registroCoste',
     'menuCoste',
+    'listadoCoste',
 ]);

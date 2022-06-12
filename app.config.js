@@ -23,6 +23,12 @@ angular.
             <menu-coste></menu-coste>
           `
         }).
+        when('/listado-coste', {
+          template: `
+            <sidebar></sidebar>
+            <listado-coste></listado-coste>
+          `
+        }).
         when('/hola', {
           template: '<hola></hola>'
         }).

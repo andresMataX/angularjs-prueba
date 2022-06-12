@@ -9,7 +9,7 @@ body {
 
 /* Sidebar */
 
-.sidebar img {
+/* .sidebar img {
     cursor: pointer;
     width: 65%;
     height: 65%;
@@ -17,15 +17,15 @@ body {
 
 .sidebar {
     border-bottom: 5px solid black;
-}
+} */
 
 /* Menú Coste */
-.menu__costes__img {
+/* .menu__costes__img {
     width: 50%;
-}
+} */
 
 /* Formularios */
-.contenedor {
+/* .contenedor {
     border: 8px solid black;
 }
 
@@ -48,4 +48,4 @@ body {
 a {
     text-decoration: none;
     color: black;
-}
+} */
