@@ -29,9 +29,12 @@ angular.
             <listado-coste></listado-coste>
           `
         }).
-        when('/hola', {
-          template: '<hola></hola>'
+        when('/listado-cliente', {
+          template: `
+            <sidebar></sidebar>
+            <listado-cliente></listado-cliente>
+          `
         }).
-        otherwise('/hola');
+        otherwise('/registrar-cliente');
     }
   ]);
