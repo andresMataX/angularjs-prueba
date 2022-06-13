@@ -13,6 +13,10 @@ angular.
                 getVentas: {
                     url: 'https://esst-system-flask.herokuapp.com/read/clientes',
                     method: 'GET'
+                },
+                getTransacciones: {
+                    url: 'https://esst-system-flask.herokuapp.com/read/transacciones',
+                    method: 'GET'
                 }
             });
         }

@@ -1,2 +1,2 @@
 // Define the `balance` module
-angular.module('balance', []);
+angular.module('balance', ['core.ventas']);
