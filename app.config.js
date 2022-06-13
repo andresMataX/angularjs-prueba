@@ -46,6 +46,6 @@ angular.
             <login></login>
           `
         }).
-        otherwise('/registrar-cliente');
+        otherwise('/login');
     }
   ]);

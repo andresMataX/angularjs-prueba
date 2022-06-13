@@ -5,8 +5,8 @@ angular
         controller: ['Cortes', 'Ventas', function RegistroClienteController(Cortes, Ventas) {
             let self = this;
             let opcion = '';
+            self.loading;
             let cortesList = [];
-            self.loading = true;
             // Referencias HTML
             const datalistCorte = document.querySelector('#cortes');
 
@@ -21,7 +21,6 @@ angular
                     cortesList.push(cortesInfo);
                 });
                 datalistCorte.innerHTML += opcion;
-                self.loading = false;
             });
 
             self.getIDCorte = () => {
@@ -33,6 +32,7 @@ angular
             }
 
             self.registrarUsuario = () => {
+                self.loading = true;
                 if (self.corte && self.nombre && self.apellido) {
                     let { $promise } = Ventas.createVenta({
                         name_cli: self.nombre,
@@ -41,6 +41,7 @@ angular
                     });
                     $promise.then(({ retro, estatus, error }) => {
                         if (estatus === 'ok') {
+                            self.loading = false;
                             alertify.alert('Registrar cliente', retro, function () {
                                 self.limpiar();
                             });

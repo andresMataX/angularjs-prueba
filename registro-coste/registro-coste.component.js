@@ -33,12 +33,14 @@ angular
             }
 
             self.registrarCoste = () => {
+                self.loading = true;
                 if (self.coste && self.nombre) {
                     let { $promise } = Costes.createCoste({
                         name_cost: self.nombre,
                         id_pro_type: self.getIDCoste()
                     });
                     $promise.then(({ retro, estatus, error }) => {
+                        self.loading = false;
                         if (estatus === 'ok') {
                             alertify.alert('Registrar coste', retro, function () {
                                 self.limpiar();
