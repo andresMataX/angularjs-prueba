@@ -4,6 +4,7 @@
 angular.module('phonecatApp', [
     'ngRoute',
     'sidebar',
+    'core',
     'registroCliente',
     'registroCoste',
     'menuCoste',

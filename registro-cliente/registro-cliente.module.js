@@ -1,2 +1,2 @@
 // Define the `registroCliente` module
-angular.module('registroCliente', []);
+angular.module('registroCliente', ['core.cortes', 'core.usuarios']);
