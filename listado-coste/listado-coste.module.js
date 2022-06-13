@@ -1,2 +1,2 @@
 // Define the `listadoCoste` module
-angular.module('listadoCoste', []);
+angular.module('listadoCoste', ['core.costes']);

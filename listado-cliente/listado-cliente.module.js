@@ -1,2 +1,2 @@
 // Define the `listadoCliente` module
-angular.module('listadoCliente', []);
+angular.module('listadoCliente', ['core.ventas']);

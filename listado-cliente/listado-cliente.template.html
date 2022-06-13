@@ -26,8 +26,8 @@
                     </h2>
                 </div>
                 <form class="flex items-center">
-                    <input class="border border-4 border-slate-900 h-16 w-96 text-3xl p-2" list="fecha" name="fecha"
-                        id="filtro_fecha" type="text" />
+                    <input required class="border border-4 border-slate-900 h-16 w-96 text-3xl p-2" list="fecha"
+                        name="fecha" id="filtro_fecha" type="text" />
                     <datalist id="fecha">
                     </datalist>
                     <button type="submit"
@@ -37,7 +37,7 @@
         </div>
         <div class="border border-4 border-slate-900 self-center">
             <div class="overflow-y-auto" style="max-height: 1000px; min-height: 600px;">
-                <table class="table-auto border-separate border-spacing-2 text-4xl text-center">
+                <table class="table-auto w-full border-separate border-spacing-2 text-3xl text-center">
                     <thead>
                         <tr>
                             <th scope=" col">ID</th>
@@ -47,11 +47,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                        <tr ng-repeat="venta in $ctrl.ventas">
+                            <th scope="row">{{venta.id}}</th>
+                            <td>{{venta.name_cli}}</td>
+                            <td>{{venta.l_name_cli}}</td>
+                            <td>{{venta.cut_name}}</td>
                         </tr>
                     </tbody>
                 </table>

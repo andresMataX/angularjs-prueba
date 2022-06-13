@@ -1,2 +1,2 @@
 // Define the `registroCoste` module
-angular.module('registroCoste', []);
+angular.module('registroCoste', ['core.costes', 'core.productos']);

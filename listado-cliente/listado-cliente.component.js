@@ -2,7 +2,10 @@ angular
     .module('listadoCliente')
     .component('listadoCliente', {
         templateUrl: 'listado-cliente/listado-cliente.template.html',
-        controller: function ListadoClienteController() {
-            this.prueba = 'Prueba de listado cliente';
-        }
+        controller: ['Ventas', function ListadoClienteController(Ventas) {
+            let self = this;
+            self.ventas = Ventas.getVentas(({ clientes }) => {
+                this.ventas = clientes;
+            });
+        }]
     })

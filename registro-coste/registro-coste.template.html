@@ -1,23 +1,27 @@
 <div class="container mx-auto my-20 h-screen border-8 border-slate-900 p-12">
     <h1 class="text-6xl font-bold text-center 12">Registrar Coste</h1>
-    <form class="flex flex-col justify-evenly h-full">
+    <form class="flex flex-col justify-evenly h-full" ng-submit="$ctrl.registrarCoste()">
         <div class="flex flex-col justify-center">
             <h2 class="text-5xl text-center 4">Nombre del producto</h2>
-            <input class="text-center mx-auto border-4 border-slate-900 rounded-2xl p-1.5 text-4xl py-2.5 px-3 w-96"
-                type="text" name="name_cli" id="nombre">
+            <input required
+                class="text-center mx-auto border-4 border-slate-900 rounded-2xl p-1.5 text-4xl py-2.5 px-3 w-96"
+                type="text" name="name_cli" id="nombre" ng-model="$ctrl.nombre">
         </div>
         <div class="flex flex-col justify-center">
             <h2 class="text-5xl text-center 4">Tipo del producto</h2>
-            <input class="text-center mx-auto border-4 border-slate-900 rounded-2xl p-1.5 text-4xl py-2.5 px-3 w-96"
-                list="cortes" name="id_cut_type" id="corte" />
-            <datalist id="cortes">
+            <input required
+                class="text-center mx-auto border-4 border-slate-900 rounded-2xl p-1.5 text-4xl py-2.5 px-3 w-96"
+                list="costes" name="id_cut_type" id="coste" ng-model="$ctrl.coste" ng-change="$ctrl.getIDCoste()" />
+            <datalist id="costes">
             </datalist>
         </div>
         <img class="w-64 mx-auto" src="./img/008-paquete.png" alt="tijeras">
         <br>
         <div class="flex justify-between">
-            <button class="border-4 border-slate-900 rounded-2xl p-1.5 text-5xl py-2.5 px-3">CANCELAR</button>
-            <button class="border-4 border-slate-900 rounded-2xl p-1.5 text-5xl py-2.5 px-3">ACEPTAR</button>
+            <button class="border-4 border-slate-900 rounded-2xl p-1.5 text-5xl py-2.5 px-3"
+                ng-click="$ctrl.limpiar()">CANCELAR</button>
+            <button type="submit"
+                class="border-4 border-slate-900 rounded-2xl p-1.5 text-5xl py-2.5 px-3">ACEPTAR</button>
         </div>
     </form>
 </div>

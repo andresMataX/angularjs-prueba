@@ -2,7 +2,7 @@ angular
     .module('registroCliente')
     .component('registroCliente', {
         templateUrl: 'registro-cliente/registro-cliente.template.html',
-        controller: ['Cortes', 'Usuarios', function RegistroClienteController(Cortes, Usuarios) {
+        controller: ['Cortes', 'Ventas', function RegistroClienteController(Cortes, Ventas) {
             let self = this;
             let opcion = '';
             let cortesList = [];
@@ -34,23 +34,28 @@ angular
 
             self.registrarUsuario = () => {
                 if (self.corte && self.nombre && self.apellido) {
-                    let { $promise } = Usuarios.createUser({
+                    let { $promise } = Ventas.createVenta({
                         name_cli: self.nombre,
                         l_name_cli: self.apellido,
                         id_cut_type: self.getIDCorte()
                     });
-                    $promise.then(({ retro, estatus }) => {
-                        alertify.set('notifier', 'position', 'top-center');
+                    $promise.then(({ retro, estatus, error }) => {
                         if (estatus === 'ok') {
-                            alertify.success(retro);
-                            setTimeout(() => {
-                                // window.location.href = "registro_cliente.html";
-                            }, 1500);
+                            alertify.alert('Registrar cliente', retro, function () {
+                                self.limpiar();
+                            });
                         } else {
+                            alertify.set('notifier', 'position', 'top-center');
                             alertify.error(error);
                         }
                     })
                 }
+            }
+
+            self.limpiar = () => {
+                document.querySelector('#nombre').value = '';
+                document.querySelector('#apellido').value = '';
+                document.querySelector('#corte').value = '';
             }
         }]
     })
