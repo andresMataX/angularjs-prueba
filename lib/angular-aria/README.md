@@ -1,4 +1,4 @@
-# packaged angular-resource
+# packaged angular-aria
 
 **This package contains the legacy AngularJS (version 1.x). AngularJS support has officially ended
 as of January 2022.
@@ -14,37 +14,36 @@ You can install this package either with `npm` or with `bower`.
 ### npm
 
 ```shell
-npm install angular-resource
+npm install angular-aria
 ```
-
-Then add `ngResource` as a dependency for your app:
+Then add `ngAria` as a dependency for your app:
 
 ```javascript
-angular.module('myApp', [require('angular-resource')]);
+angular.module('myApp', [require('angular-aria')]);
 ```
 
 ### bower
 
 ```shell
-bower install angular-resource
+bower install angular-aria
 ```
 
 Add a `<script>` to your `index.html`:
 
 ```html
-<script src="/bower_components/angular-resource/angular-resource.js"></script>
+<script src="/bower_components/angular-aria/angular-aria.js"></script>
 ```
 
-Then add `ngResource` as a dependency for your app:
+Then add `ngAria` as a dependency for your app:
 
 ```javascript
-angular.module('myApp', ['ngResource']);
+angular.module('myApp', ['ngAria']);
 ```
 
 ## Documentation
 
 Documentation is available on the
-[AngularJS docs site](http://docs.angularjs.org/api/ngResource).
+[AngularJS docs site](http://docs.angularjs.org/api/ngAria).
 
 ## License
 

@@ -1,4 +1,4 @@
-# packaged angular-resource
+# packaged angular-messages
 
 **This package contains the legacy AngularJS (version 1.x). AngularJS support has officially ended
 as of January 2022.
@@ -14,37 +14,37 @@ You can install this package either with `npm` or with `bower`.
 ### npm
 
 ```shell
-npm install angular-resource
+npm install angular-messages
 ```
 
-Then add `ngResource` as a dependency for your app:
+Then add `ngMessages` as a dependency for your app:
 
 ```javascript
-angular.module('myApp', [require('angular-resource')]);
+angular.module('myApp', [require('angular-messages')]);
 ```
 
 ### bower
 
 ```shell
-bower install angular-resource
+bower install angular-messages
 ```
 
 Add a `<script>` to your `index.html`:
 
 ```html
-<script src="/bower_components/angular-resource/angular-resource.js"></script>
+<script src="/bower_components/angular-messages/angular-messages.js"></script>
 ```
 
-Then add `ngResource` as a dependency for your app:
+Then add `ngMessages` as a dependency for your app:
 
 ```javascript
-angular.module('myApp', ['ngResource']);
+angular.module('myApp', ['ngMessages']);
 ```
 
 ## Documentation
 
 Documentation is available on the
-[AngularJS docs site](http://docs.angularjs.org/api/ngResource).
+[AngularJS docs site](http://docs.angularjs.org/api/ngMessages).
 
 ## License
 

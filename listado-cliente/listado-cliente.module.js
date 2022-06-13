@@ -1,2 +1,2 @@
 // Define the `listadoCliente` module
-angular.module('listadoCliente', ['core.ventas']);
+angular.module('listadoCliente', ['ngAnimate', 'core.ventas']);

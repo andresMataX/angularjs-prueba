@@ -5,6 +5,7 @@ angular
         controller: ['Ventas', function BalanceController(Ventas) {
             let self = this;
             self.ingresos = self.gastos = 0;
+            self.loading = true;
 
             Ventas.getTransacciones(({ transacciones }) => {
                 transacciones.forEach((trans) => {
@@ -15,6 +16,7 @@ angular
                     }
                 });
                 self.renderGrafica();
+                self.loading = false;
             });
 
             self.renderGrafica = () => {

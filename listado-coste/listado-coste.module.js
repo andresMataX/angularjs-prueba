@@ -1,2 +1,2 @@
 // Define the `listadoCoste` module
-angular.module('listadoCoste', ['core.costes']);
+angular.module('listadoCoste', ['ngAnimate', 'core.costes']);

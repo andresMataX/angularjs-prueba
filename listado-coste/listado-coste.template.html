@@ -1,4 +1,4 @@
-<div class="container mx-auto my-20 h-screen border-8 border-slate-900 p-12">
+<div class="container mx-auto my-20 h-full min-h-screen border-8 border-slate-900 p-12">
     <div class="flex justify-between">
         <h2 class="border border-4 border-slate-900 w-56 text-center">
             <a class="text-5xl" href="#!/balance">
@@ -11,17 +11,15 @@
             </a>
         </h2>
     </div>
-    <div class="flex flex-col h-full justify-evenly">
+    <div class="flex flex-col justify-evenly h-full min-h-screen">
         <div class="">
             <h1 class="text-6xl font-bold text-center 12">Listado de costes</h1>
             <div class="flex flex-col items-center mt-12">
                 <p class="text-3xl text-center p-2.5"><em>Filtrar por producto</em></p>
-                <form class="flex items-center">
+                <div class="flex items-center">
                     <input required class="border border-4 border-slate-900 h-16 w-96 text-3xl p-2" type="text"
-                        name="producto" id="producto">
-                    <button type="submit"
-                        class="rounded border border-8 border-slate-900 text-5xl rounded-lg px-4 mx-4">Buscar</button>
-                </form>
+                        name="producto" id="producto" ng-model="$ctrl.query">
+                </div>
             </div>
         </div>
         <div class="border border-4 border-slate-900 self-center">
@@ -36,7 +34,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="coste in $ctrl.costes">
+                        <tr class="animate-repeat" ng-repeat="coste in $ctrl.costes | filter:$ctrl.query">
                             <th scope="row">{{coste.id}}</th>
                             <td>{{coste.name_cost}}</td>
                             <td>{{coste.prod_name}}</td>
@@ -44,6 +42,8 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="loading" ng-if="$ctrl.loading">
+                </div>
             </div>
         </div>
     </div>

@@ -1,33 +1,16 @@
-<div class="container mx-auto my-20 h-screen border-8 border-slate-900 p-12">
-    <div class="flex flex-col h-full justify-evenly">
+<div class="container mx-auto my-20 h-full min-h-screen border-8 border-slate-900 p-12">
+    <div class="flex flex-col justify-evenly h-full min-h-screen">
         <div class="">
             <h1 class="text-6xl font-bold text-center 12">Listado de clientes</h1>
             <div class="flex flex-col items-center mt-12">
-                <div class="flex justify-center flex-wrap mb-8 opciones">
-                    <h2 class="border border-4 border-slate-900 w-56 text-center text-5xl">
-                        Fecha
-                    </h2>
-                    <h2 class="border border-4 border-slate-900 w-56 text-center text-5xl">
-                        Día
-                    </h2>
-                    <h2 class="border border-4 border-slate-900 w-56 text-center text-5xl">
-                        Mes
-                    </h2>
-                    <h2 class="border border-4 border-slate-900 w-56 text-center text-5xl">
-                        Año
-                    </h2>
+                <p class="text-3xl text-center p-2.5"><em>Filtrar por clientes</em></p>
+                <div class="flex items-center">
+                    <input required class="border border-4 border-slate-900 h-16 w-96 text-3xl p-2" type="text"
+                        ng-model="$ctrl.query" />
                 </div>
-                <form class="flex items-center">
-                    <input required class="border border-4 border-slate-900 h-16 w-96 text-3xl p-2" list="fecha"
-                        name="fecha" id="filtro_fecha" type="text" />
-                    <datalist id="fecha">
-                    </datalist>
-                    <button type="submit"
-                        class="rounded border border-8 border-slate-900 text-5xl rounded-lg px-4 mx-4">Buscar</button>
-                </form>
             </div>
         </div>
-        <div class="border border-4 border-slate-900 self-center">
+        <div class="border-8 border-slate-900 self-center">
             <div class="overflow-y-auto" style="max-height: 1000px; min-height: 600px;">
                 <table class="table-auto w-full border-separate border-spacing-2 text-3xl text-center">
                     <thead>
@@ -39,7 +22,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="venta in $ctrl.ventas">
+                        <tr class="animate-repeat" ng-repeat="venta in $ctrl.ventas | filter:$ctrl.query">
                             <th scope="row">{{venta.id}}</th>
                             <td>{{venta.name_cli}}</td>
                             <td>{{venta.l_name_cli}}</td>
