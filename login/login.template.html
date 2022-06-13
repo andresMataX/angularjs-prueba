@@ -9,6 +9,8 @@
             <h1 class="text-8xl text-center">
                 <em class="font-bold">ESST</em> <span>System</span>
             </h1>
+            <div class="loading" ng-if="$ctrl.loading">
+            </div>
         </div>
         <form ng-submit="$ctrl.inicioSesion()">
             <h2 class="text-center text-6xl">Usuario</h2>
@@ -23,7 +25,5 @@
             <button class="block mx-auto border-4 border-slate-900 rounded-2xl p-1.5 text-5xl py-2.5 px-3"
                 type="submit">Ingresar</button>
         </form>
-        <div class="loading" ng-if="$ctrl.loading">
-        </div>
     </div>
 </div>
