@@ -35,6 +35,17 @@ angular.
             <listado-cliente></listado-cliente>
           `
         }).
+        when('/balance', {
+          template: `
+            <sidebar></sidebar>
+            <balance></balance>
+          `
+        }).
+        when('/login', {
+          template: `
+            <login></login>
+          `
+        }).
         otherwise('/registrar-cliente');
     }
   ]);

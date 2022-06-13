@@ -7,6 +7,13 @@ body {
     margin: 0;
 }
 
+.grafica {
+    display: block;
+    margin: auto;
+    width: 650px !important;
+    height: 650px !important;
+}
+
 /* Sidebar */
 
 /* .sidebar img {
